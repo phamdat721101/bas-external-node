@@ -1,0 +1,11 @@
+
+Your new key was generated
+
+Public address of the key:   0x67D7cfd808bE256C2B58755184538Ee290b153EA
+Path of the secret key file: /home/developer/node-config/storage/fxce-validator3/keystore/UTC--2022-12-07T03-06-40.892366430Z--67d7cfd808be256c2b58755184538ee290b153ea
+
+- You can share your public address with anyone. Others need it to interact with you.
+- You must NEVER share the secret key with anyone! The key controls access to your funds!
+- You must BACKUP your key file! Without the key, it's impossible to access account funds!
+- You must REMEMBER your password! Without the password, it's impossible to decrypt the key!
+

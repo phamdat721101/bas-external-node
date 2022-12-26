@@ -1,0 +1,5 @@
+genesis.json
+.idea
+node_modules
+blockscout/postgres-data/
+datadir/
