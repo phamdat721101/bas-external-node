@@ -13,26 +13,26 @@ services:
     ports:
       - "7432:5432"
 
-  # blockscout:
-  #   depends_on:
-  #     - db
-  #   image: blockscout/blockscout:${DOCKER_TAG:-4.1.5}
-  #   restart: always
-  #   links:
-  #     - db:database
-  #   command: 'mix do ecto.create, ecto.migrate, phx.server'
-  #   extra_hosts:
-  #     - 'host.docker.internal:host-gateway'
-  #   #env_file:
-  #   #  -  ./envs/common-blockscout.env
-  #   environment:
-  #     ETHEREUM_JSONRPC_VARIANT: "geth"
-  #     # BLOCK_TRANSFORMER: "clique"
-  #     ETHEREUM_JSONRPC_HTTP_URL: "http://202.143.111.229:32003"
-  #     DATABASE_URL: "postgresql://postgres:@host.docker.internal:7432/blockscout?ssl=false"
-  #     ECTO_USE_SSL: "false"
-  #   ports:
-  #     - "4000:4000"
+  blockscout:
+    depends_on:
+      - db
+    image: blockscout/blockscout:${DOCKER_TAG:-4.1.5}
+    restart: always
+    links:
+      - db:database
+    command: 'mix do ecto.create, ecto.migrate, phx.server'
+    extra_hosts:
+      - 'host.docker.internal:host-gateway'
+    #env_file:
+    #  -  ./envs/common-blockscout.env
+    environment:
+      ETHEREUM_JSONRPC_VARIANT: "geth"
+      # BLOCK_TRANSFORMER: "clique"
+      ETHEREUM_JSONRPC_HTTP_URL: "http://192.167.98.4:2003"
+      DATABASE_URL: "postgresql://postgres:@host.docker.internal:7432/blockscout?ssl=false"
+      ECTO_USE_SSL: "false"
+    ports:
+      - "4000:4000"
 
   # gateway:
   #   depends_on:
